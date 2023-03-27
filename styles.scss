@@ -1,11 +1,88 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 
-$paragraphColor: blue;
-$bgParagraph: red;
 
-p
+$defaultFontFamily: 'Mali', 'Sofia', Helvetica, sans-serif;
+$bgTop: rgb(80, 73, 73);
+
+*
 {
-  color: $paragraphColor;
-  background-color: $bgParagraph;
+  margin: 0;
+  background-color: rgb(100, 82, 82);
+}
+
+nav
+{
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  background-color: $bgTop;
+  padding-bottom: 2em;
+
+  h2
+  {
+    // justify-content: flex-end;
+    background-color: $bgTop;
+    font-size: 3em;
+    font-family: $defaultFontFamily;
+    
+    padding-top: 0.75em;
+    padding-left: 1em;
+  }
+
+  a
+  {
+    // align-items: flex-end;
+
+    font-size: 2em;
+    font-family: $defaultFontFamily;
+    font-weight: normal;
+    text-decoration: none;
+    background-color: $bgTop;
+    color: black;
+
+    padding-right: 2em;
+    padding-top: 1.34em;
+
+  }
+  a:hover
+  {
+    font-weight: bold;
+  }
+}
+
+#toDo-container
+{
+  display: flex;
+  justify-content: start;
+
+  margin-top: 3em;
+  
+  #todo-title
+  {
+    display: block;
+    margin-left: 4em;
+
+    font-size: 1.6em;
+    font-family: $defaultFontFamily;
+    text-align: center;
+
+    border-radius: 2em;
+    border-style: solid;
+    border-color: black;
+  }
+
+  #todo-description
+  {
+    display: block;
+    margin-left: 2em;
+    margin-top: 1em;
+
+    font-size: 1.5em;
+    font-family: $defaultFontFamily;
+
+    border-radius: 0.5em;
+    border-style: solid;
+    border-color: black;
+  }
 }
