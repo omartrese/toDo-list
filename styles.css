@@ -69,4 +69,15 @@ nav a:hover {
   border-radius: 0.5em;
   border-style: solid;
   border-color: black;
+}
+#toDo-container #todoTasks
+{
+  margin-left: 5em;
+  margin-top: 2em;  
+  font-size: 1em;
+  font-family: "Mali", "Sofia", Helvetica, sans-serif;
+}
+#toDo-container #todoTasks p
+{
+  margin-top: 2em;
 }/*# sourceMappingURL=styles.css.map */

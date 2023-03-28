@@ -53,7 +53,7 @@ nav
 
 #toDo-container
 {
-  display: flex;
+  display: block;
   justify-content: start;
 
 
@@ -64,9 +64,10 @@ nav
   #todoInput
   {
     
+    display: flex;
+
     #todo-title
     {
-      display: block;
       margin-left: 4em;
   
       font-size: 1.6em;
@@ -80,7 +81,6 @@ nav
   
     #todo-description
     {
-      display: block;
       margin-left: 2em;
       margin-top: 1em;
   
@@ -94,7 +94,6 @@ nav
   
     #addTodo-button
     {
-      display: block;
       margin-left: 9em;
       margin-top: 1em;
   
@@ -102,10 +101,13 @@ nav
       font-family: $defaultFontFamily;
       padding-top: 0.15em;
   
-      border-radius: 0.5em;
+      border-radius: 100em;
       border-style: solid;
       border-color: black;  
   
     }
+
   }
+
+
 }
