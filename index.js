@@ -14,7 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    const task = { title: taskTitle, description: taskDescription };
+    const task = { 
+      title: taskTitle, 
+      description: taskDescription 
+    };
     const tasks = getTasksFromLocalStorage();
     tasks.push(task);
     saveTasksToLocalStorage(tasks);
