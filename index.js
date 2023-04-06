@@ -6,6 +6,8 @@ addEventListener('DOMContentLoaded', () => {
   
   let tasks = []
   
+  document.getElementById('clear-todoList').addEventListener('click', clearTasks);
+
   function newTask(e) 
   {
     
@@ -46,6 +48,7 @@ addEventListener('DOMContentLoaded', () => {
     document.getElementById('todo-description').value = "";
     taskTitle = "";
     taskDescription = "";
+
   }
   
   function getTasks()
@@ -70,8 +73,15 @@ addEventListener('DOMContentLoaded', () => {
         renderTasks.innerHTML += `<p>
         ${title} -- ${description}</p>`
       }
-
     }
+  }
+
+  function clearTasks()
+  {
+    let tasks = JSON.parse(localStorage.getItem('Tasks'));
+    tasks = [];
+    localStorage.setItem('Tasks', JSON.stringify(tasks));
+    getTasks();
   }
 
 })

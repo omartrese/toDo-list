@@ -70,6 +70,17 @@ nav a:hover {
   border-style: solid;
   border-color: black;
 }
+#toDo-container #todoInput #clear-todoList {
+  display: block;
+  margin-left: 10em;
+  margin-top: 1em;
+  font-size: 1.5em;
+  font-family: "Mali", "Sofia", Helvetica, sans-serif;
+  padding-top: 0.15em;
+  border-radius: 0.5em;
+  border-style: solid;
+  border-color: black;
+}
 #toDo-container #todoTasks
 {
   margin-left: 5em;
