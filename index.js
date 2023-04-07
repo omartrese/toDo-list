@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const taskList = document.getElementById('todoTasks');
   const addTaskButton = document.getElementById('addTodo-button');
   const clearTaskButton = document.getElementById('clear-todoList');
+  const removeTasks = document.querySelectorAll('.removeTask');
 
   addTaskButton.addEventListener('click', () => {
     const taskTitle = taskTitleInput.value.trim();
@@ -44,14 +45,59 @@ document.addEventListener('DOMContentLoaded', () => {
     taskDescriptionInput.value = '';
   }
 
+  function deleteTask(title) {
+    console.log("has pulsado el boton de eliminar tarea");
+    let tasks = [];
+    tasks = getTasksFromLocalStorage();
+  
+    for (let i = 0; i < tasks.length; i++) {
+      console.log(title);
+      if (tasks[i].title === title) {
+        tasks.splice(i, 1);
+      }
+    }
+  
+    renderTasks(tasks);
+    saveTasksToLocalStorage(tasks);
+  }
+
+  
   function renderTasks(tasks) {
     taskList.innerHTML = tasks
-      .map((task) => {
-        const description = task.description ? ` -- ${task.description}` : '';
-        return `<p>${task.title}${description} <button class="removeTask"> X </button> </p>`;
-      })
-      .join('');
+    .map((task) => {
+      const description = task.description ? ` -- ${task.description}` : '';
+      
+      return `<p>${task.title}${description} <button class="removeTask" onclick="deleteTask('${task.title}')"> X </button> </p>`;
+    })
+    .join('');
   }
 
   renderTasks(getTasksFromLocalStorage());
 });
+
+function deleteTask(title) {
+  console.log("has pulsado el boton de eliminar tarea");
+  let tasks = [];
+  tasks = getTasksFromLocalStorage();
+
+  for (let i = 0; i < tasks.length; i++) {
+    console.log(title);
+    if (tasks[i].title === title) {
+      tasks.splice(i, 1);
+    }
+  }
+
+  renderTasks(tasks);
+  saveTasksToLocalStorage(tasks);
+}
+
+
+function renderTasks(tasks) {
+  taskList.innerHTML = tasks
+  .map((task) => {
+    const description = task.description ? ` -- ${task.description}` : '';
+    
+    return `<p>${task.title}${description} <button class="removeTask" onclick="deleteTask('${task.title}')"> X </button> </p>`;
+  })
+  .join('');
+}

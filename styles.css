@@ -27,7 +27,8 @@ nav a {
   text-decoration: none;
   background-color: rgb(80, 73, 73);
   color: black;
-  padding-right: 2em;
+  padding-right: 1em;
+  margin-left: 1em;
   padding-top: 1.34em;
 }
 nav a:hover {
@@ -42,7 +43,7 @@ nav a:hover {
 }
 #toDo-container #todoInput #todo-title {
   display: block;
-  margin-left: 4em;
+  margin-left: 5em;
   font-size: 1.6em;
   font-family: "Mali", "Sofia", Helvetica, sans-serif;
   text-align: center;
@@ -52,7 +53,7 @@ nav a:hover {
 }
 #toDo-container #todoInput #todo-description {
   display: block;
-  margin-left: 2em;
+  margin-left: 3em;
   margin-top: 1em;
   font-size: 1.5em;
   font-family: "Mali", "Sofia", Helvetica, sans-serif;
@@ -62,7 +63,7 @@ nav a:hover {
 }
 #toDo-container #todoInput #addTodo-button {
   display: block;
-  margin-left: 9em;
+  margin-left: 10em;
   margin-top: 1em;
   font-size: 1.5em;
   font-family: "Mali", "Sofia", Helvetica, sans-serif;
@@ -73,7 +74,7 @@ nav a:hover {
 }
 #toDo-container #todoInput #clear-todoList {
   display: block;
-  margin-left: 10em;
+  margin-left: 11em;
   margin-top: 1em;
   font-size: 1.5em;
   font-family: "Mali", "Sofia", Helvetica, sans-serif;
@@ -96,9 +97,9 @@ nav a:hover {
 }
 .removeTask
 {
-  margin-top: 2em;
+  margin-top: 0.5em;
   margin-left: 1.15em;
-  padding-top: 0.3em;
+  padding-top: 0.35em;
   font-size: 1em;
   border-radius: 100%;
   border-width: 2px;
