@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
 * {
+  display: block;
   margin: 0;
   background-color: rgb(100, 82, 82);
 }
