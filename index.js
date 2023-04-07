@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     taskList.innerHTML = tasks
       .map((task) => {
         const description = task.description ? ` -- ${task.description}` : '';
-        return `<p>${task.title}${description}</p>`;
+        return `<button id="removeTask"> <p>${task.title}${description}</p> </button>`;
       })
       .join('');
   }

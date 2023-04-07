@@ -34,13 +34,15 @@ nav a:hover {
 }
 
 #toDo-container {
-  display: flex;
+  display: block;
   justify-content: start;
   margin-top: 3em;
   font-size: 1.3em;
 }
+#toDo-container #todoInput {
+  display: flex;
+}
 #toDo-container #todoInput #todo-title {
-  display: block;
   margin-left: 4em;
   font-size: 1.6em;
   font-family: "Mali", "Sofia", Helvetica, sans-serif;
@@ -50,7 +52,6 @@ nav a:hover {
   border-color: black;
 }
 #toDo-container #todoInput #todo-description {
-  display: block;
   margin-left: 2em;
   margin-top: 1em;
   font-size: 1.5em;
@@ -60,35 +61,12 @@ nav a:hover {
   border-color: black;
 }
 #toDo-container #todoInput #addTodo-button {
-  display: block;
   margin-left: 9em;
   margin-top: 1em;
   font-size: 1.5em;
   font-family: "Mali", "Sofia", Helvetica, sans-serif;
   padding-top: 0.15em;
-  border-radius: 0.5em;
+  border-radius: 100em;
   border-style: solid;
   border-color: black;
-}
-#toDo-container #todoInput #clear-todoList {
-  display: block;
-  margin-left: 10em;
-  margin-top: 1em;
-  font-size: 1.5em;
-  font-family: "Mali", "Sofia", Helvetica, sans-serif;
-  padding-top: 0.15em;
-  border-radius: 0.5em;
-  border-style: solid;
-  border-color: black;
-}
-#toDo-container #todoTasks
-{
-  margin-left: 5em;
-  margin-top: 2em;  
-  font-size: 1em;
-  font-family: "Mali", "Sofia", Helvetica, sans-serif;
-}
-#toDo-container #todoTasks p
-{
-  margin-top: 2em;
 }/*# sourceMappingURL=styles.css.map */
