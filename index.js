@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     taskDescriptionInput.value = '';
   }
 
-  function deleteTask(title) {
+  function delTask(title) {
     console.log("has pulsado el boton de eliminar tarea");
     let tasks = [];
     tasks = getTasksFromLocalStorage();
@@ -60,44 +60,29 @@ document.addEventListener('DOMContentLoaded', () => {
     renderTasks(tasks);
     saveTasksToLocalStorage(tasks);
   }
-
+  
   
   function renderTasks(tasks) {
-    taskList.innerHTML = tasks
-    .map((task) => {
-      const description = task.description ? ` -- ${task.description}` : '';
-      
-      return `<p>${task.title}${description} <button class="removeTask" onclick="deleteTask('${task.title}')"> X </button> </p>`;
-    })
-    .join('');
+
+    taskList.innerHTML = '';
+
+    for (let i = 0; i < tasks.length; i++) 
+    {
+      let title = tasks[i].title;
+      let description = tasks[i].description;
+
+      if(description === "")
+      {
+        taskList.innerHTML += `<p>
+        ${title} <a href="#" onclick="delTask('${title}')" class="removeTask" > X </a> </p>`
+      } else 
+      {
+        taskList.innerHTML += `<p>
+        ${title} -- ${description}</p>`
+      }
+
+    }
   }
 
   renderTasks(getTasksFromLocalStorage());
 });
-
-function deleteTask(title) {
-  console.log("has pulsado el boton de eliminar tarea");
-  let tasks = [];
-  tasks = getTasksFromLocalStorage();
-
-  for (let i = 0; i < tasks.length; i++) {
-    console.log(title);
-    if (tasks[i].title === title) {
-      tasks.splice(i, 1);
-    }
-  }
-
-  renderTasks(tasks);
-  saveTasksToLocalStorage(tasks);
-}
-
-
-function renderTasks(tasks) {
-  taskList.innerHTML = tasks
-  .map((task) => {
-    const description = task.description ? ` -- ${task.description}` : '';
-    
-    return `<p>${task.title}${description} <button class="removeTask" onclick="deleteTask('${task.title}')"> X </button> </p>`;
-  })
-  .join('');
-}
