@@ -107,4 +107,5 @@ nav a:hover {
   width: 2em;
   height: 2em;
   color: grey;
+  text-decoration: none;
 }

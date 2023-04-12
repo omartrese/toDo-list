@@ -1,88 +1,121 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const taskTitleInput = document.getElementById('todo-title');
-  const taskDescriptionInput = document.getElementById('todo-description');
-  const taskList = document.getElementById('todoTasks');
-  const addTaskButton = document.getElementById('addTodo-button');
+addEventListener('DOMContentLoaded', () => {
+
+  if(JSON.parse(localStorage.getItem('Tasks').length === null))
+  {
+    return;
+  } else getTasks();
+  document.getElementById('addTodo-button').addEventListener('click', newTask);
+  
   const clearTaskButton = document.getElementById('clear-todoList');
-  const removeTasks = document.querySelectorAll('.removeTask');
+  let tasks = []
+  let removeButtons = document.querySelectorAll('.removeTask');
 
-  addTaskButton.addEventListener('click', () => {
-    const taskTitle = taskTitleInput.value.trim();
-    const taskDescription = taskDescriptionInput.value.trim();
+  for(let i = 0; i < removeButtons.length; i++)
+  {
+    removeButtons[i].addEventListener('click', () => {
 
-    if (!taskTitle) {
-      alert('The task must contain a title');
+      console.log(removeButtons[i]);
+      let tasks = JSON.parse(localStorage.getItem('Tasks'));
+
+      for(let j = 0; j < tasks.length; j++)
+      {
+        tasks.splice(j, tasks.length);
+      }
+      localStorage.setItem('Tasks', JSON.stringify(tasks));
+      getTasks();
+    })
+  }
+
+  function newTask(e) 
+  {
+    
+    let taskTitle = document.getElementById('todo-title').value;
+    let taskDescription = document.getElementById('todo-description').value;
+    
+    if(taskTitle === "")
+    {
+      alert('the task must contain a title');
       return;
     }
 
-    const task = { 
+    // console.log('The TITLE of the new task is: ' + taskTitle + '\n \n and the DESCRIPTION is: ' + taskDescription);
+
+
+    const task = {
       title: taskTitle, 
-      description: taskDescription 
+      description: taskDescription
     };
-    const tasks = getTasksFromLocalStorage();
-    tasks.push(task);
-    saveTasksToLocalStorage(tasks);
 
-    clearTaskInputs();
-    renderTasks(tasks);
-  });
+    console.log(task);
 
-  clearTaskButton.addEventListener('click', () => {
-    saveTasksToLocalStorage([]);
-    renderTasks([]);
-  });
+    // if(localStorage.getItem('Tasks')[0] === null)
+    // {
+    //   tasks.push(task);
+    //   localStorage.setItem('Tasks', JSON.stringify(tasks));
+    // } else
+    // {
+      let tasks = JSON.parse(localStorage.getItem('Tasks'));
+      tasks.push(task);   
+      localStorage.setItem('Tasks', JSON.stringify(tasks));
+    // }
 
-  function getTasksFromLocalStorage() {
-    return JSON.parse(localStorage.getItem('Tasks')) || [];
+    console.log(tasks);
+    e.preventDefault();
+    getTasks();
+    document.getElementById('todo-title').value = "";
+    document.getElementById('todo-description').value = "";
+    taskTitle = "";
+    taskDescription = "";
   }
-
-  function saveTasksToLocalStorage(tasks) {
-    localStorage.setItem('Tasks', JSON.stringify(tasks));
-  }
-
-  function clearTaskInputs() {
-    taskTitleInput.value = '';
-    taskDescriptionInput.value = '';
-  }
-
-  function delTask(title) {
-    console.log("has pulsado el boton de eliminar tarea");
-    let tasks = [];
-    tasks = getTasksFromLocalStorage();
   
-    for (let i = 0; i < tasks.length; i++) {
-      console.log(title);
-      if (tasks[i].title === title) {
+  clearTaskButton.addEventListener('click', () => {
+    let tasks = JSON.parse(localStorage.getItem('Tasks'));
+    tasks = [];
+    localStorage.setItem('Tasks', JSON.stringify(tasks));
+    getTasks();
+  });
+
+  function deleteTask(title) 
+  {
+    console.log(title);
+    let tasks = JSON.parse(localStorage.getItem('tasks'));
+    for(let i = 0; i < tasks.length; i++) {
+      if(tasks[i].title === title) {
         tasks.splice(i, 1);
       }
     }
-  
-    renderTasks(tasks);
-    saveTasksToLocalStorage(tasks);
+    localStorage.setItem('Tasks', JSON.stringify(tasks));
   }
-  
-  
-  function renderTasks(tasks) {
 
-    taskList.innerHTML = '';
-
-    for (let i = 0; i < tasks.length; i++) 
+  function getTasks()
+  {
+    let newTasks = JSON.parse(localStorage.getItem('Tasks'));
+    let renderTasks = document.getElementById('todoTasks');
+    
+    renderTasks.innerHTML = '';
+    
+    for (let i = 0; i < newTasks.length; i++) 
     {
-      let title = tasks[i].title;
-      let description = tasks[i].description;
-
+      let title = newTasks[i].title;
+      let description = newTasks[i].description;
+      
       if(description === "")
       {
-        taskList.innerHTML += `<p>
-        ${title} <a href="#" onclick="delTask('${title}')" class="removeTask" > X </a> </p>`
+        renderTasks.innerHTML += `<p>
+        ${title}
+        <a href="#" class="removeTask"> X </button>
+        </p>`
       } else 
       {
-        taskList.innerHTML += `<p>
-        ${title} -- ${description}</p>`
+        renderTasks.innerHTML += `<p>
+        ${title} -- ${description}
+        <a href="#" class="removeTask"> X </button>
+        </p>`
       }
-
+      
     }
+    console.log(document.querySelectorAll('.removeTask').length);
   }
+  
 
-  renderTasks(getTasksFromLocalStorage());
-});
+})

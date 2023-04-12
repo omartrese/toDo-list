@@ -1,0 +1,102 @@
+[33mcommit c35fb239fd717ad210da9828ac90ed4d863a63c3[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: omartrese <omarlayachi13@gmail.com>
+Date:   Wed Apr 12 19:36:46 2023 +0200
+
+    deleteTaskBugs
+
+[33mcommit b20fdd99de53534716f0370b28fb23781bd64528[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: omartrese <omarlayachi13@gmail.com>
+Date:   Fri Apr 7 19:06:18 2023 +0200
+
+    deleteTaskProcess
+
+[33mcommit a5a2518bade32049b2dde66b6e70776aafed6295[m
+Author: omartrese <omarlayachi13@gmail.com>
+Date:   Fri Apr 7 17:12:15 2023 +0200
+
+    stylesFixed&removeTask
+
+[33mcommit 9c0f8be116f800093f198c693e99813679be343e[m
+Author: omartrese <omarlayachi13@gmail.com>
+Date:   Fri Apr 7 16:38:22 2023 +0200
+
+    bugsbugsbugs
+
+[33mcommit 1b9bb60f6759ae4f28e92f0e5ad224f84c1dd9cc[m
+Author: omartrese <omarlayachi13@gmail.com>
+Date:   Fri Apr 7 16:36:09 2023 +0200
+
+    a-lot-of-bugs-CSS
+
+[33mcommit d76e48ef6b046672818926247215956a5edd6e9f[m
+Author: omartrese <108763869+omartrese@users.noreply.github.com>
+Date:   Thu Apr 6 19:08:56 2023 +0200
+
+    objectChange
+
+[33mcommit 15fb4f3ee2b62d5be44135acc4ea519062b1ce1e[m
+Merge: 3515a14 24087fe
+Author: Ody <108763869+omartrese@users.noreply.github.com>
+Date:   Thu Apr 6 21:04:38 2023 +0200
+
+    code-optimized
+
+[33mcommit 3515a14ba85aa7c9ec549d292997b921f2ac25c4[m
+Author: Ody <108763869+omartrese@users.noreply.github.com>
+Date:   Thu Apr 6 20:08:57 2023 +0200
+
+    adding README
+
+[33mcommit 6d4e968b40e50c7fe17c2f2c23ffc8b249375e40[m
+Author: omartrese <omarlayachi13@gmail.com>
+Date:   Thu Apr 6 19:57:25 2023 +0200
+
+    clear-tasks
+
+[33mcommit 24087fef6bd0e6fa84242e5fb79ac434adf557df[m
+Author: omartrese <108763869+omartrese@users.noreply.github.com>
+Date:   Thu Apr 6 19:00:51 2023 +0200
+
+    code-optimized
+
+[33mcommit 6607890e27ad1cabe93c445404e7ce5cfdf2f723[m
+Author: omartrese <omarlayachi13@gmail.com>
+Date:   Wed Mar 29 19:01:58 2023 +0200
+
+    add-tasks
+
+[33mcommit 09d1c658b04fcc3a78f1bc8d8a5657bc8a9aea35[m
+Author: omartrese <omarlayachi13@gmail.com>
+Date:   Tue Mar 28 18:12:23 2023 +0200
+
+    starting-logic
+
+[33mcommit 722e3c8ce8ebc0c4d07f0c09bc2153c7f7c31309[m
+Author: omartrese <omarlayachi13@gmail.com>
+Date:   Mon Mar 27 19:18:44 2023 +0200
+
+    styles-finished
+
+[33mcommit 687fd488230d8b9d302c6661e0635066a424462f[m
+Author: omartrese <omarlayachi13@gmail.com>
+Date:   Mon Mar 27 19:06:23 2023 +0200
+
+    inputs-fix
+
+[33mcommit 6274f4c78054835751985a654b5cc2beba759dd7[m
+Author: omartrese <omarlayachi13@gmail.com>
+Date:   Mon Mar 27 18:52:03 2023 +0200
+
+    inputs-added
+
+[33mcommit 3bc03ddf62b9c0904971d785b0d4df6ea0451e6b[m
+Author: omartrese <omarlayachi13@gmail.com>
+Date:   Mon Mar 27 17:41:37 2023 +0200
+
+    sorted-directories
+
+[33mcommit b53133d33476fb172addbadafd7de6218763ad18[m
+Author: omartrese <omarlayachi13@gmail.com>
+Date:   Mon Mar 27 17:39:01 2023 +0200
+
+    initial-commit
